@@ -16,6 +16,37 @@
     padding: var(--spacing-l);
 }
 
+/* About page main section buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.btn--primary {
+    background: var(--colour-primary);
+    color: #fff;
+}
+
+.btn--primary:hover {
+    background: var(--colour-secondary);
+}
+
+.btn--secondary {
+    background: transparent;
+    color: var(--colour-primary);
+    border: 2px solid var(--colour-primary);
+}
+
+.btn--secondary:hover {
+    background: var(--colour-primary);
+    color: #fff;
+}
+
 /* mobile-specific styles */
 @media (max-width: 799px) {
     .header__content {
@@ -44,6 +75,50 @@
     .off-screen-menu {
         font-size: 1rem;
         gap: 1rem; /* smaller text for mobile dropdown */
+    }
+
+    .about {
+        background: #fff;
+        color: var(--colour-text-dark);
+        padding: var(--spacing-xl) var(--spacing-l);
+        text-align: center;
+    }
+
+    .about__intro {
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .about__heading {
+        font-size: 1.5rem;
+        color: var(--colour-primary);
+        margin-bottom: var(--spacing-m);
+    }
+
+    .about__heading span {
+        color: var(--colour-secondary);
+    }
+
+    .about__text {
+        font-size: 1rem;
+        line-height: 1.5;
+        max-width: 600px;
+        margin: 0 auto;
+        color: var(--colour-text-dark);
+    }
+
+    .about__cards {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-l);
+        margin-top: var(--spacing-xl);
+    }
+
+    .about__card {
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        padding: var(--spacing-l);
     }
 }
 
@@ -92,6 +167,34 @@
 
     .ham-menu {
         display: none; /* Hide hamburger menu on desktop */
+    }
+
+    .about {
+        text-align: left;
+        padding: var(--spacing-xxl) var(--spacing-xl);
+    }
+
+    .about__intro {
+        max-width: 800px;
+        margin: 0 auto var(--spacing-xl);
+        text-align: center;
+    }
+
+    .about__heading {
+        font-size: 2rem;
+    }
+
+    .about__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-l);
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .about__card {
+        text-align: center;
+        padding: var(--spacing-xl);
     }
 }
 
@@ -156,7 +259,7 @@
 /* hamburger menu */
 .off-screen-menu {
     background-color: var(--colour-primary-dark);
-    height: 25vh;
+    height: 30vh;
     width: 70%;
     max-width: 250px;
     position: fixed;

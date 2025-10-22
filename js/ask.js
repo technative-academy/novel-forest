@@ -18,6 +18,10 @@ class Ask {
             this.resultsContainer = document.querySelector('.results')
             this.resultsList =
                 this.resultsContainer.querySelector('.results__list')
+
+            this.historyContainer = document.querySelector(
+                '.history__container'
+            )
         }
     }
 
@@ -129,16 +133,17 @@ class Ask {
                     .getElementById(`result${index}`)
                     .querySelector('.results__item-description').textContent =
                     result.description
-                localStorage.setItem(result.title, result.description)
             })
         }
 
-        /*localStorage.setItem(this.getFormattedInput(), data)
-        
-            if to save historical data based on the query
+        sessionStorage.setItem(this.getFormattedInput(), data)
 
-        */
+        //if to save historical data based on the query
     }
+
+    fillSearchHistory(input, data) {}
+
+    retrieveFromSearchHistory() {}
 }
 
 // Expose an instance of the 'Ask' class
